@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aspire and Inspire Leadership | Executive Coaching, Leadership Development & Retreats</title>
+  <meta name="description" content="Aspire and Inspire Leadership helps organizations strengthen leadership capacity through executive coaching, leadership development workshops, and retreat planning. Led by Dr. Betsy Curry, we transform vision into action, improving outcomes, culture, and staff retention.">
+  <meta name="theme-color" content="#0A1C33">
+  <meta property="og:title" content="Aspire and Inspire Leadership" />
+  <meta property="og:description" content="Leadership development, improving outcomes, building sustainable practices that support culture and retention." />
+  <meta property="og:type" content="website" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Spectral:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0A1C33;
+      --gold:#D4AF37;
+      --white:#FFFFFF;
+      --gray:#F3F5F7;
+      --ink:#0f172a;
+      --max:1100px;
+      --radius:14px;
+      --shadow:0 10px 30px rgba(0,0,0,.12);
+    }
+
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--white); background:var(--navy); line-height:1.6;
+    }
+    img{max-width:100%; height:auto; display:block}
+    a{color:inherit; text-decoration:none}
+    .container{width:min(100%, calc(var(--max) + 3rem)); margin-inline:auto; padding-inline:1.5rem}
+    .btn{
+      display:inline-block; padding:.9rem 1.2rem; border-radius:999px;
+      font-weight:600; letter-spacing:.2px; transition:.2s ease transform, .2s ease background, .2s ease opacity;
+      background:var(--gold); color:var(--navy);
+      box-shadow:0 6px 18px rgba(212,175,55,.35);
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn--outline{background:transparent; border:1.5px solid var(--gold); color:var(--white)}
+    .eyebrow{letter-spacing:.14em; text-transform:uppercase; font-size:.78rem; opacity:.8}
+    h1,h2,h3{line-height:1.15; margin:0 0 .6rem}
+    h1{font-family:Spectral,Georgia,serif; font-weight:700; font-size:clamp(2rem,4.1vw,3.2rem)}
+    h2{font-family:Spectral,Georgia,serif; font-weight:700; font-size:clamp(1.6rem,3.1vw,2.2rem)}
+    h3{font-weight:700; font-size:1.15rem}
+    p{margin:.4rem 0 1rem}
+
+    header{
+      position:sticky; top:0; z-index:50; background:rgba(10,28,51,.8); backdrop-filter:saturate(120%) blur(6px);
+      border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:68px}
+    .brand{display:flex; align-items:center; gap:.75rem}
+    .brand .icon{width:40px; height:40px; background:var(--gold); border-radius:8px; display:grid; place-items:center; font-size:1.4rem}
+    .brand .name{font-weight:700; letter-spacing:.4px}
+    .brand .tagline{font-size:.75rem; opacity:.75}
+    nav ul{display:flex; gap:1rem; list-style:none; margin:0; padding:0}
+    nav a{padding:.5rem .6rem; border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,.08)}
+    .nav-actions{display:flex; gap:.6rem; align-items:center}
+    .hamburger{display:none; background:none; border:0; color:var(--white); font-size:1.6rem; cursor:pointer}
+
+    .hero{
+      position:relative; overflow:hidden; padding:clamp(3rem,6vw,5rem) 0;
+      background:radial-gradient(1200px 600px at 80% -20%, rgba(212,175,55,.18), transparent 60%), var(--navy);
+    }
+    .hero-grid{display:grid; grid-template-columns:1.25fr .9fr; gap:2.5rem; align-items:center}
+    .kicker{margin-bottom:.8rem}
+    .hero p{max-width:58ch; opacity:.95}
+    .cta-row{display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1.25rem}
+    .hero-image{
+      background:linear-gradient(135deg, var(--gold), #D4AF37AA);
+      border-radius:12px;
+      height:400px;
+      display:grid;
+      place-items:center;
+      font-size:4rem;
+      opacity:0.9;
+    }
+
+    section.light{background:var(--white); color:var(--ink)}
+    section.gray{background:var(--gray); color:var(--ink)}
+    section{padding:clamp(3rem,6vw,5rem) 0}
+
+    .about{display:grid; grid-template-columns:1.15fr .85fr; gap:2rem; align-items:start}
+    .headshot{
+      border-radius:12px; 
+      box-shadow:var(--shadow); 
+      background:linear-gradient(135deg, #cbd5e1, #94a3b8);
+      height:300px;
+      display:grid;
+      place-items:center;
+      font-size:3rem;
+    }
+    .about .card{background:var(--white); border-radius:var(--radius); padding:1.25rem; box-shadow:var(--shadow)}
+
+    .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-top:1rem}
+    .card{
+      background:var(--white); color:var(--ink); border-radius:var(--radius); padding:1.1rem 1.1rem 1.2rem;
+      box-shadow:var(--shadow); border:1px solid #e5e7eb;
+    }
+    .card .icon{width:42px; height:42px; border-radius:10px; background:rgba(212,175,55,.16); display:grid; place-items:center; margin-bottom:.6rem}
+    .card p{margin:0}
+
+    .testimonials .quote{
+      background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); padding:1rem 1.1rem; border-radius:var(--radius);
+    }
+    .testimonials .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem}
+
+    form{display:grid; gap:.8rem; max-width:720px}
+    label{font-weight:600; font-size:.95rem}
+    input, textarea, select{
+      width:100%; padding:.9rem 1rem; border-radius:10px; border:1px solid #e5e7eb; background:var(--white); color:var(--ink);
+      font:inherit
+    }
+    textarea{min-height:140px; resize:vertical}
+    .small{font-size:.85rem; opacity:.8}
+
+    footer{padding:2rem 0; border-top:1px solid rgba(255,255,255,.08); font-size:.9rem; color:#cbd5e1}
+
+    @media (max-width: 980px){
+      .hero-grid, .about{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr 1fr}
+      .testimonials .grid{grid-template-columns:1fr}
+    }
+    @media (max-width: 640px){
+      nav ul{display:none}
+      .hamburger{display:block}
+      .cards{grid-template-columns:1fr}
+      .brand .tagline{display:none}
+    }
+    .mobile-menu{display:none; padding:0 1.5rem 1rem; border-bottom:1px solid rgba(255,255,255,.08)}
+    .mobile-menu a{display:block; padding:.7rem 0}
+    .mobile-menu.open{display:block}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main">
+      <div class="brand">
+        <div class="icon">⭐</div>
+        <div>
+          <div class="name">Aspire and Inspire Leadership</div>
+          <div class="tagline">Leadership development • outcomes • sustainable culture & retention</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="hamburger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu container" role="navigation" aria-label="Mobile">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="home" class="hero" role="main">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow kicker">Leadership development, improving outcomes, building sustainable practices that support culture and retention</div>
+        <h1>Empower Leaders. Strengthen Teams. Sustain Success.</h1>
+        <p>At Aspire and Inspire Leadership, we help executives, school leaders, and corporate teams cultivate the skills and systems that inspire engagement and long-term retention.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://forms.google.com/your-form-id" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
+          <a class="btn btn--outline" href="#services">Explore Services</a>
+        </div>
+      </div>
+
+      <aside aria-label="Feature image">
+        <div class="hero-image">🚀</div>
+      </aside>
+    </div>
+  </main>
+
+  <section id="about" class="light">
+    <div class="container about">
+      <div>
+        <h2>Helping Leaders Aspire Higher — and Inspire Others to Stay</h2>
+        <p>Strong leadership is the foundation of staff engagement and retention. We partner with organizations to build leaders who not only achieve results but also cultivate belonging, purpose, and professional growth within their teams.</p>
+
+        <div class="card" aria-label="About Dr. Betsy Curry">
+          <h3>About Dr. Betsy Curry</h3>
+          <p>Dr. Betsy Curry is an accomplished leadership consultant specializing in helping organizations operationalize broad concepts into actionable strategies. With deep expertise in visioning, leadership development, and sustainable culture-building, she partners with executives and teams to transform ideas into measurable results. Her work inspires leaders to build clarity, confidence, and capacity across their organizations.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="headshot">👤</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="gray">
+    <div class="container">
+      <h2>Tailored Leadership Solutions for Lasting Impact</h2>
+      <div class="cards" role="list">
+        <article class="card" role="listitem">
+          <div class="icon" aria-hidden="true">🏛️</div>
+          <h3>Leadership Consulting</h3>
+          <p>Strategic, data-informed guidance for executive teams seeking to strengthen leadership pipelines and improve staff retention.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="icon" aria-hidden="true">🎯</div>
+          <h3>Executive Coaching (1:1)</h3>
+          <p>Personalized coaching to enhance clarity, communication, and confidence — with measurable outcomes for engagement and performance.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="icon" aria-hidden="true">📚</div>
+          <h3>Workshops & Professional Learning</h3>
+          <p>Interactive sessions that energize teams, improve collaboration, and embed sustainable leadership practices that promote positive culture.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="icon" aria-hidden="true">🌿</div>
+          <h3>Retreat & Event Planning</h3>
+          <p>End-to-end planning for leadership retreats and development events that blend learning, reflection, and team connection.</p>
+        </article>
+      </div>
+
+      <div style="margin-top:1.25rem">
+        <a class="btn" href="https://forms.google.com/your-form-id" target="_blank" rel="noopener noreferrer">Ready to strengthen your leaders and your culture?</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container testimonials">
+      <h2>What Our Clients Are Saying</h2>
+      <div class="grid" role="list" aria-label="Client testimonials">
+        <blockquote class="quote" role="listitem">
+          <p>"Aspire and Inspire Leadership helped our team clarify our vision and rebuild trust. Staff engagement — and retention — improved within months."</p>
+          <footer>— Executive Director, Education Nonprofit</footer>
+        </blockquote>
+        <blockquote class="quote" role="listitem">
+          <p>"Dr. Curry's coaching gave me tools to lead with confidence and empathy. Our department now communicates better than ever."</p>
+          <footer>— HR Leader, Corporate Partner</footer>
+        </blockquote>
+        <blockquote class="quote" role="listitem">
+          <p>"Our leadership retreat was transformative — perfectly planned and deeply impactful."</p>
+          <footer>— School Superintendent</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="light" aria-labelledby="contactHeading">
+    <div class="container">
+      <h2 id="contactHeading">Let's Build Leadership That Lasts</h2>
+      <p style="margin-bottom: 1.5rem">Ready to transform your leadership and strengthen your organization? We'd love to hear from you.</p>
+      
+      <div style="text-align: center; padding: 2rem 0;">
+        <a class="btn" href="https://forms.google.com/your-form-id" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; padding: 1.1rem 2rem;">
+          Complete Our Inquiry Form
+        </a>
+        <p style="margin-top: 1.5rem">This will open our secure Google Form in a new tab where you can share your goals and schedule a consultation.</p>
+      </div>
+      
+      <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+        <p class="small">Prefer email? Reach out directly at <a href="mailto:info@aspireandinspireleadership.com" style="color: var(--gold); font-weight: 600;">info@aspireandinspireleadership.com</a></p>
+        <p class="small" style="margin-top: 0.5rem">We respect your privacy and typically respond within 24 business hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; gap:1rem; justify-content:space-between; flex-wrap:wrap; align-items:center">
+      <div>&copy; <span id="year"></span> Aspire and Inspire Leadership. All rights reserved.</div>
+      <div class="small">LinkedIn: <a href="#" rel="noopener">Connect</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.hamburger');
+    const menu = document.getElementById('mobileMenu');
+    toggle?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> menu.classList.remove('open')));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
