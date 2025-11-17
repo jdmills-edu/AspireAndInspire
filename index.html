@@ -111,10 +111,27 @@
     .testimonials .quote footer{font-style:italic; opacity:.85; font-size:.9rem; margin-top:1rem}
     .testimonials .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem}
 
-    .featured-testimonials{margin-top:2.5rem}
+    .featured-testimonials{margin-bottom:2.5rem}
     .featured-testimonials .quote{
-      background:rgba(212,175,55,.08); border:1px solid rgba(212,175,55,.25); padding:2rem 2.5rem;
-      margin-bottom:1.5rem; max-width:900px; margin-left:auto; margin-right:auto;
+      position:relative;
+      background:rgba(212,175,55,.15); border:2px solid var(--gold); padding:2rem 2.5rem;
+      margin-bottom:1.5rem;
+    }
+    .featured-testimonials .quote::before{
+      content:'★';
+      position:absolute;
+      top:-1px;
+      left:-1px;
+      background:var(--gold);
+      color:var(--navy);
+      width:48px;
+      height:48px;
+      display:grid;
+      place-items:center;
+      font-size:1.5rem;
+      border-radius:var(--radius) 0 var(--radius) 0;
+      border-right:2px solid var(--gold);
+      border-bottom:2px solid var(--gold);
     }
     .featured-testimonials .quote p{font-size:1.05rem; line-height:1.75}
     .featured-testimonials .quote footer{font-weight:600; opacity:1; margin-top:1.25rem}
@@ -255,6 +272,20 @@
   <section id="testimonials">
     <div class="container testimonials">
       <h2>What Our Clients Are Saying</h2>
+
+      <div class="featured-testimonials" role="list" aria-label="Featured testimonials">
+        <blockquote class="quote" role="listitem">
+          <p>Dr. Curry has a remarkable ability to build the collective capacity of individuals with diverse backgrounds and varying levels of confidence while growing a sense of urgency around a team goal. She energizes staff cohesion while helping each team member to grow as effective organizational leaders. Her credibility and the respect she earns stem from her authenticity—she openly shares personal experiences that highlight the importance of resilience, trust, and communication in leadership.</p>
+          <footer>— Michelle Motley, Team Lead, Instructional Facilitator, Event Coordinator, Data Specialist</footer>
+        </blockquote>
+        <blockquote class="quote" role="listitem">
+          <p>We had the pleasure of working with Dr. Curry during our most recent managers' retreat, and Aspire event planning services far exceeded our expectations in every way. From the moment we arrived, they welcomed us with a thoughtful and personalized gift package, setting a warm and intentional tone for the entire experience.</p>
+          <p>Dr. Curry curated unforgettable team bonding activities and shared meals that created lasting memories and deeper connections among our leadership team. She topped it off with a transformative work style assessment that sparked insightful, energizing conversations. As a result, we left with practical tools to better align our executive team's strengths with our organizational mission and evolving challenges.</p>
+          <p>Simply put, we could not have asked for a better experience. Aspire and Dr. Curry were truly outstanding, I could not recommend them more highly!</p>
+          <footer>— Lisa Williams, Principal CAP8 Doors and Hardware, Washington DC</footer>
+        </blockquote>
+      </div>
+
       <div class="grid" role="list" aria-label="Client testimonials">
         <blockquote class="quote" role="listitem">
           <p>"Aspire and Inspire Leadership helped our team clarify our vision and rebuild trust. Staff engagement — and retention — improved within months."</p>
@@ -267,19 +298,6 @@
         <blockquote class="quote" role="listitem">
           <p>"Our leadership retreat was transformative — perfectly planned and deeply impactful."</p>
           <footer>— School Superintendent</footer>
-        </blockquote>
-      </div>
-
-      <div class="featured-testimonials" role="list" aria-label="Featured testimonials">
-        <blockquote class="quote" role="listitem">
-          <p>Dr. Curry has a remarkable ability to build the collective capacity of individuals with diverse backgrounds and varying levels of confidence while growing a sense of urgency around a team goal. She energizes staff cohesion while helping each team member to grow as effective organizational leaders. Her credibility and the respect she earns stem from her authenticity—she openly shares personal experiences that highlight the importance of resilience, trust, and communication in leadership.</p>
-          <footer>— Michelle Motley, Team Lead, Instructional Facilitator, Event Coordinator, Data Specialist</footer>
-        </blockquote>
-        <blockquote class="quote" role="listitem">
-          <p>We had the pleasure of working with Dr. Curry during our most recent managers' retreat, and Aspire event planning services far exceeded our expectations in every way. From the moment we arrived, they welcomed us with a thoughtful and personalized gift package, setting a warm and intentional tone for the entire experience.</p>
-          <p>Dr. Curry curated unforgettable team bonding activities and shared meals that created lasting memories and deeper connections among our leadership team. She topped it off with a transformative work style assessment that sparked insightful, energizing conversations. As a result, we left with practical tools to better align our executive team's strengths with our organizational mission and evolving challenges.</p>
-          <p>Simply put, we could not have asked for a better experience. Aspire and Dr. Curry were truly outstanding, I could not recommend them more highly!</p>
-          <footer>— Lisa Williams, Principal CAP8 Doors and Hardware, Washington DC</footer>
         </blockquote>
       </div>
     </div>
