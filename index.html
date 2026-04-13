@@ -115,7 +115,7 @@
     .featured-testimonials .quote{
       position:relative;
       background:#1a2d45; border:2px solid var(--gold); padding:2rem 2.5rem;
-      margin-bottom:1.5rem;
+      margin-bottom:1.5rem; color:var(--white);
     }
     .featured-testimonials .quote::before{
       content:'★';
@@ -161,6 +161,26 @@
     .mobile-menu{display:none; padding:0 1.5rem 1rem; border-bottom:1px solid rgba(255,255,255,.08)}
     .mobile-menu a{display:block; padding:.7rem 0}
     .mobile-menu.open{display:block}
+
+    .slideshow{position:relative; max-width:900px; margin:1.5rem auto 0}
+    .slides{position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:16/9; background:#000}
+    .slides img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .5s ease}
+    .slides img.active{opacity:1}
+    .slide-btn{
+      position:absolute; top:50%; transform:translateY(-50%); z-index:10;
+      background:rgba(10,28,51,.6); border:1.5px solid rgba(212,175,55,.6); color:var(--gold);
+      width:44px; height:44px; border-radius:50%; font-size:1.3rem; cursor:pointer;
+      display:grid; place-items:center; transition:.2s ease background;
+    }
+    .slide-btn:hover{background:rgba(10,28,51,.9)}
+    .slide-btn.prev{left:.75rem}
+    .slide-btn.next{right:.75rem}
+    .slide-dots{display:flex; justify-content:center; gap:.5rem; margin-top:.9rem; flex-wrap:wrap}
+    .slide-dots button{
+      width:10px; height:10px; border-radius:50%; border:none; cursor:pointer;
+      background:rgba(255,255,255,.3); padding:0; transition:.2s ease background;
+    }
+    .slide-dots button.active{background:var(--gold)}
   </style>
 </head>
 <body>
@@ -179,6 +199,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#photos">Photos</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -193,6 +214,7 @@
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#photos">Photos</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </div>
@@ -264,12 +286,40 @@
       </div>
 
       <div style="margin-top:1.25rem">
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScrhLEur5rWifwPy4n8CPnD1Nl92gVRsk-R2CqSWnYpB234Cw/viewform" target="_blank" rel="noopener noreferrer">Ready to strengthen your leaders and your culture?</a>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScrhLEur5rWifwPy4n8CPnD1Nl92gVRsk-R2CqSWnYpB234Cw/viewform" target="_blank" rel="noopener noreferrer">Ready to strengthen your relationships, leaders, or your culture?</a>
       </div>
     </div>
   </section>
 
-  <section id="testimonials">
+  <section id="photos">
+    <div class="container">
+      <h2>Photos</h2>
+      <div class="slideshow" aria-label="Photo gallery">
+        <div class="slides">
+          <img src="media/gallery/retreat1.jpeg" alt="Gallery photo 1" class="active">
+          <img src="media/gallery/retreat2.jpeg" alt="Gallery photo 2">
+          <img src="media/gallery/retreat3.jpeg" alt="Gallery photo 3">
+          <img src="media/gallery/retreat4.jpeg" alt="Gallery photo 4">
+          <img src="media/gallery/retreat5.jpeg" alt="Gallery photo 5">
+          <img src="media/gallery/113PateDrive-3.jpeg"  alt="Gallery photo 6">
+          <img src="media/gallery/113PateDrive-12.jpeg" alt="Gallery photo 7">
+          <img src="media/gallery/113PateDrive-15.jpeg" alt="Gallery photo 8">
+          <img src="media/gallery/113PateDrive-18.jpeg" alt="Gallery photo 9">
+          <img src="media/gallery/113PateDrive-23.jpeg" alt="Gallery photo 10">
+          <img src="media/gallery/113PateDrive-35.jpeg" alt="Gallery photo 11">
+          <img src="media/gallery/113PateDrive-39.jpeg" alt="Gallery photo 12">
+          <img src="media/gallery/113PateDrive-54.jpeg" alt="Gallery photo 13">
+          <img src="media/gallery/113PateDrive-63.jpeg" alt="Gallery photo 14">
+          <img src="media/gallery/113PateDrive-66.jpeg" alt="Gallery photo 15">
+        </div>
+        <button class="slide-btn prev" aria-label="Previous photo">&#8249;</button>
+        <button class="slide-btn next" aria-label="Next photo">&#8250;</button>
+        <div class="slide-dots" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="light">
     <div class="container testimonials">
       <h2>What Our Clients Are Saying</h2>
 
@@ -288,20 +338,31 @@
     </div>
   </section>
 
-  <section id="contact" class="light" aria-labelledby="contactHeading">
+  <section id="contact" class="gray" aria-labelledby="contactHeading">
     <div class="container">
-      <h2 id="contactHeading">Let's Build Leadership That Lasts</h2>
-      <p style="margin-bottom: 1.5rem">Ready to transform your leadership and strengthen your organization? We'd love to hear from you.</p>
+      <h2 id="contactHeading">Let's Build Relationships & Leadership That Last</h2>
+      <p style="margin-bottom: 1.5rem">Ready to enjoy a Western North Carolina retreat experience or transform your leadership and strengthen your organization?<br>We'd love to hear from you.</p>
       
-      <div style="text-align: center; padding: 2rem 0;">
+      <div style="text-align: center; padding: 0.75rem 0;">
         <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScrhLEur5rWifwPy4n8CPnD1Nl92gVRsk-R2CqSWnYpB234Cw/viewform" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; padding: 1.1rem 2rem;">
-          Complete Our Inquiry Form
+          Leadership Inquiry Form
+        </a>
+      </div>
+      <div style="text-align: center; padding: 0.75rem 0;">
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeyyu21uvcx1nWbwllD0vL0UP7hKMzrEk-i-mCj5wl8EzS6jA/viewform" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; padding: 1.1rem 2rem;">
+          Girlfriend Retreat Inquiry Form
+        </a>
+      </div>
+      <div style="text-align: center; padding: 0.75rem 0;">
+        <a class="btn" href="https://docs.google.com/forms/d/1MKQVQiJH5ZgtugSm9NSQ_n-kssaHYV7YJ8QjP_tivX4/viewform" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; padding: 1.1rem 2rem;">
+          General Retreat Inquiry Form
         </a>
         <p style="margin-top: 1.5rem">This will open our secure Google Form in a new tab where you can share your goals and schedule a consultation.</p>
+
       </div>
-      
       <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
         <p class="small">Prefer email? Reach out directly at <a href="mailto:inspireleadership67@gmail.com" style="color: var(--gold); font-weight: 600;">inspireleadership67@gmail.com</a></p>
+        <p class="small">Or connect on LinkedIn: <a href="https://www.linkedin.com/in/betsy-curry-08157a296/" target="_blank" rel="noopener" style="color: var(--gold); font-weight: 600;"">Betsy Curry</a></p>
         <p class="small" style="margin-top: 0.5rem">We respect your privacy and typically respond within 24 business hours.</p>
       </div>
     </div>
@@ -325,6 +386,31 @@
     menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> menu.classList.remove('open')));
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function(){
+      const imgs = document.querySelectorAll('.slides img');
+      const dotsContainer = document.querySelector('.slide-dots');
+      let current = 0;
+
+      imgs.forEach((_, i) => {
+        const d = document.createElement('button');
+        if (i === 0) d.classList.add('active');
+        d.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(d);
+      });
+      const dots = dotsContainer.querySelectorAll('button');
+
+      function goTo(n) {
+        imgs[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (n + imgs.length) % imgs.length;
+        imgs[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      document.querySelector('.slide-btn.prev').addEventListener('click', () => goTo(current - 1));
+      document.querySelector('.slide-btn.next').addEventListener('click', () => goTo(current + 1));
+    })();
   </script>
 </body>
 </html>
